@@ -1,0 +1,253 @@
+:root {
+    --primary: #16a34a;
+    --primary-dark: #15803d;
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-700: #374151;
+    --gray-900: #111827;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1.5;
+    background: var(--gray-50);
+    color: var(--gray-900);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.hero {
+    background: linear-gradient(to bottom right, #16a34a, #15803d);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+}
+
+.intro {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.intro h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--gray-900);
+}
+
+.intro p {
+    font-size: 1.125rem;
+    color: var(--gray-700);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.offers {
+    padding: 2rem 0 4rem;
+}
+
+.offer-card {
+    background: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    transition: transform 0.2s;
+}
+
+.offer-card:hover {
+    transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+    .offer-card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.offer-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+@media (min-width: 768px) {
+    .offer-image {
+        height: 100%;
+    }
+}
+
+.offer-content {
+    padding: 2rem;
+}
+
+.offer-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.offer-description {
+    color: var(--gray-700);
+    margin-bottom: 1.5rem;
+}
+
+.features-list {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    color: var(--gray-700);
+}
+
+.feature-item::before {
+    content: "✓";
+    color: var(--primary);
+    margin-right: 0.5rem;
+    font-weight: bold;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.price-note {
+    font-size: 0.875rem;
+    color: var(--gray-700);
+    margin-bottom: 1.5rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 0.875rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s;
+    text-align: center;
+    width: 100%;
+}
+
+.cta-button:hover {
+    background: var(--primary-dark);
+}
+
+.guarantee {
+    background: white;
+    padding: 4rem 0;
+    margin: 4rem 0;
+}
+
+.guarantee-content {
+    text-align: center;
+}
+
+.guarantee-content h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.guarantee-features {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+    .guarantee-features {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.guarantee-feature {
+    padding: 1.5rem;
+}
+
+.guarantee-feature .icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.guarantee-feature h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.guarantee-feature p {
+    color: var(--gray-700);
+}
+
+footer {
+    background: white;
+    border-top: 1px solid var(--gray-200);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer-links {
+    margin-top: 1rem;
+}
+
+.footer-links a {
+    color: var(--gray-700);
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+.footer-links a:hover {
+    color: var(--primary);
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 3rem 0;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .intro {
+        padding: 3rem 0;
+    }
+
+    .intro h2 {
+        font-size: 1.75rem;
+    }
+
+    .offer-content {
+        padding: 1.5rem;
+    }
+}
